@@ -1,0 +1,74 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+body {
+  margin: 0;
+  padding: 0;
+  color: #000;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 20px;
+  background-image: url('https://img.freepik.com/free-vector/worldwide-connection-gray-background-illustration-vector_53876-61773.jpg?size=626&ext=jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#root {
+    padding: 20px;
+}
+
+#search {
+    display: block;
+    padding: 10px;
+    width: 300px;
+    height: 40px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#country-container {
+    text-align: center;
+}
+
+.country-box {
+    display: flex;
+    justify-content: center;
+}
+.country-info {
+    text-align: left;
+    padding: 10px;
+    margin-right: 20px;
+}
+.info-item + .info-item {
+    margin-top: 10px;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.languages-list {
+    list-style: circle;
+    margin-top: 10px;
+}
+
+#country-list {
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.country-item + .country-item {
+    margin-top: 10px;
+}
