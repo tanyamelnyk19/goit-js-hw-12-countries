@@ -16,7 +16,6 @@ refs.input.addEventListener('input', debounce(onInputChange, 500));
 function onInputChange(e) {
     clearInput();
     const searchQuery = refs.input.value;
-    console.log(searchQuery);
     fetchCountries(searchQuery)
     .then(country => {
         if(country.length > 10) {
