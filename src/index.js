@@ -18,7 +18,13 @@ function onInputChange(e) {
     const searchQuery = refs.input.value;
     fetchCountries(searchQuery)
     .then(country => {
-        if(country.length > 10) {
+        if (country.status === 404) {
+            console.log(country.status);
+            alert({
+                text: 'Oops! No countries found!'
+              });
+        }
+        else if(country.length > 10) {
             error({
                 text: 'Too many matches found. Please enter a more specific query!'
               });
@@ -35,7 +41,7 @@ function onInputChange(e) {
               });
         }
     })
-    .catch(error => console.log(error))
+    .catch(onError)
 }
 
 function createCountryMarkup(country) {
@@ -49,3 +55,8 @@ function clearInput() {
     refs.countryContainer.innerHTML = '';
     refs.countryList.innerHTML = '';
   }
+function onError() {
+    alert({
+        text: 'Error!'
+      });
+}
